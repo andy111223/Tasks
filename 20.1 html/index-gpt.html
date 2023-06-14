@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .survey-question {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Economic Aspects of AI Tools Survey</h1>
+    <form id="survey-form">
+      
+<div class="survey-question">
+            <label for="question1">Question 1: What was your initial impression of using ChatGPT?</label><br>
+            <input type="text" id="question1" name="question1">
+        </div>
+        <div class="survey-question">
+            <label for="question2">Question 2: How has ChatGPT improved your efficiency in completing the term project?</label><br>
+            <input type="text" id="question2" name="question2">
+        </div>
+        <div class="survey-question">
+            <label for="question3">Question 3: How has using ChatGPT affected the overall costs of completing your term project?</label><br>
+            <input type="text" id="question3" name="question3">
+        </div>
+        <input type="submit" value="Submit Survey">
+        <div class="survey-question">
+            <label for="question4">Question 4: Do you believe using ChatGPT reduced the time needed for research work?</label><br>
+            <input type="radio" id="question4_yes" name="question4" value="yes">
+            <label for="question4_yes">Yes</label><br>
+            <input type="radio" id="question4_no" name="question4" value="no">
+            <label for="question4_no">No</label>
+        </div>
+        <div class="survey-question">
+            <label for="question5">Question 5: On a scale of 1 to 5, how would you rate the overall user experience of ChatGPT in supporting your project work? (1 being least effective and 5 being most effective)</label><br>
+            <input type="number" id="question5" name="question5" min="1" max="5">
+        </div>
+        <div class="survey-question">
+            <label for="question6">Question 6: Would you consider using AI chat tools for future academic work or research?</label><br>
+            <input type="radio" id="question6_yes" name="question6" value="yes">
+            <label for="question6_yes">Yes</label><br>
+            <input type="radio" id="question6_no" name="question6" value="no">
+            <label for="question6_no">No</label>
+        </div>
+        <input type="submit" value="Submit Survey">
+    </form>
+
+    <script src="survey.js"></script>
+</body>
+</html>
+
