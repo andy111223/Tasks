@@ -26,7 +26,8 @@ dependencies {
 	testCompileOnly 'org.projectlombok:lombok:1.18.28'
 	testAnnotationProcessor 'org.projectlombok:lombok:1.18.28'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
-	implementation 'org.springdoc:springdoc-openapi-ui:1.6.6'
+	implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.2.0'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 }
 
 tasks.named('test') {
