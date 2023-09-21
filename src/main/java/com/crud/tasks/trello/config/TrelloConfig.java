@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TrelloConfig {
 
-    @Value("${spring.datasource.username}")
+    @Value("${trello.username}")
     private String username;
     @Value("${trello.api.endpoint.prod}")
     private String trelloApiEndpoint;

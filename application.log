@@ -50,3 +50,69 @@
 2023-09-21T19:39:13.406+02:00  INFO 11496 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-09-21T19:39:13.408+02:00  INFO 11496 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-09-21T19:39:13.413+02:00  INFO 11496 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-21T22:10:02.153+02:00  INFO 20023 --- [Test worker] com.crud.tasks.TasksApplicationTests     : Starting TasksApplicationTests using Java 19.0.2 with PID 20023 (started by andrzej in /home/andrzej/Development/Projects/Tasks)
+2023-09-21T22:10:02.153+02:00  INFO 20023 --- [Test worker] com.crud.tasks.TasksApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2023-09-21T22:10:02.562+02:00  INFO 20023 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-21T22:10:02.588+02:00  INFO 20023 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interfaces.
+2023-09-21T22:10:02.789+02:00  INFO 20023 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-21T22:10:02.806+02:00  INFO 20023 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-09-21T22:10:02.807+02:00  INFO 20023 --- [Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-21T22:10:02.859+02:00  INFO 20023 --- [Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-21T22:10:02.909+02:00  INFO 20023 --- [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-21T22:10:02.916+02:00  INFO 20023 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-21T22:10:04.339+02:00  INFO 20023 --- [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7462ba4b
+2023-09-21T22:10:04.341+02:00  INFO 20023 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-21T22:10:04.587+02:00  INFO 20023 --- [Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL57Dialect, version: 5.7
+2023-09-21T22:10:04.588+02:00  WARN 20023 --- [Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-21T22:10:04.690+02:00  INFO 20023 --- [Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-21T22:10:04.929+02:00  INFO 20023 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-21T22:10:05.252+02:00  INFO 20023 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-21T22:10:05.500+02:00  WARN 20023 --- [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-21T22:10:05.813+02:00  INFO 20023 --- [Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-09-21T22:10:05.850+02:00  INFO 20023 --- [Test worker] com.crud.tasks.TasksApplicationTests     : Started TasksApplicationTests in 3.808 seconds (process running for 4.285)
+2023-09-21T22:10:06.436+02:00  INFO 20023 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-21T22:10:06.438+02:00  INFO 20023 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-21T22:10:07.050+02:00  INFO 20023 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-21T22:10:15.421+02:00  INFO 20356 --- [main] com.crud.tasks.TasksApplication          : Starting TasksApplication using Java 17.0.5 with PID 20356 (/home/andrzej/Development/Projects/Tasks/build/classes/java/main started by andrzej in /home/andrzej/Development/Projects/Tasks)
+2023-09-21T22:10:15.422+02:00  INFO 20356 --- [main] com.crud.tasks.TasksApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-09-21T22:10:15.817+02:00  INFO 20356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-21T22:10:15.845+02:00  INFO 20356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interfaces.
+2023-09-21T22:10:16.078+02:00  INFO 20356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-21T22:10:16.083+02:00  INFO 20356 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-21T22:10:16.083+02:00  INFO 20356 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-09-21T22:10:16.129+02:00  INFO 20356 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-21T22:10:16.130+02:00  INFO 20356 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 681 ms
+2023-09-21T22:10:16.231+02:00  INFO 20356 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-21T22:10:16.248+02:00  INFO 20356 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-09-21T22:10:16.249+02:00  INFO 20356 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-21T22:10:16.298+02:00  INFO 20356 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-21T22:10:16.352+02:00  INFO 20356 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-21T22:10:16.360+02:00  INFO 20356 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-21T22:10:18.105+02:00  INFO 20356 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b5798c2
+2023-09-21T22:10:18.107+02:00  INFO 20356 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-21T22:10:18.403+02:00  INFO 20356 --- [main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL57Dialect, version: 5.7
+2023-09-21T22:10:18.404+02:00  WARN 20356 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-21T22:10:18.496+02:00  INFO 20356 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-21T22:10:18.752+02:00  INFO 20356 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-21T22:10:19.283+02:00  INFO 20356 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-21T22:10:19.481+02:00  WARN 20356 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-21T22:10:19.724+02:00  INFO 20356 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-09-21T22:10:19.767+02:00  INFO 20356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-21T22:10:19.775+02:00  INFO 20356 --- [main] com.crud.tasks.TasksApplication          : Started TasksApplication in 4.56 seconds (process running for 4.742)
+2023-09-21T22:20:52.186+02:00  INFO 20356 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-21T22:20:52.186+02:00  INFO 20356 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-21T22:20:52.187+02:00  INFO 20356 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-21T22:20:52.844+02:00  INFO 20356 --- [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 148 ms
+2023-09-21T22:21:39.501+02:00  WARN 20356 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4b5798c2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-09-21T22:21:39.502+02:00  WARN 20356 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7332ff91 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-09-21T22:21:39.502+02:00  WARN 20356 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5282cdc4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-09-21T22:21:39.503+02:00  WARN 20356 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5507e8df (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-09-21T22:21:39.504+02:00  WARN 20356 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7c3db73c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-09-21T22:21:39.504+02:00  WARN 20356 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5c3f1376 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-09-21T22:21:39.504+02:00  WARN 20356 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3614493e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-09-21T22:21:39.505+02:00  WARN 20356 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@27019c97 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-09-21T22:21:39.506+02:00  WARN 20356 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@73c7cc3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-09-21T22:21:39.506+02:00  WARN 20356 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@233c6bf1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-09-21T22:27:07.825+02:00  INFO 20356 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-21T22:27:07.826+02:00  INFO 20356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-21T22:27:10.273+02:00  INFO 20356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
