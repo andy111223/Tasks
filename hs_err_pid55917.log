@@ -1,0 +1,145 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGBUS (0x7) at pc=0x00007fe09d02d83e, pid=55917, tid=55932
+#
+# JRE version: OpenJDK Runtime Environment (17.0.1+12) (build 17.0.1+12-nixos)
+# Java VM: OpenJDK 64-Bit Server VM (17.0.1+12-nixos, mixed mode, emulated-client, sharing, tiered, compressed oops, compressed class ptrs, serial gc, linux-amd64)
+# Problematic frame:
+# V  [libjvm.so+0xc4f83e]  PerfLongVariant::sample()+0x1e
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport -p%p -s%s -c%c -d%d -P%P -u%u -g%g -- %E" (or dumping to /home/runner/Tasks/core.55917)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -XX:TieredStopAtLevel=1 -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant com.crud.tasks.TasksApplication
+
+Host: Intel(R) Xeon(R) CPU @ 2.20GHz, 8 cores, 1G, Ubuntu 20.04.2 LTS
+Time: Sat Aug 12 16:01:57 2023 UTC elapsed time: 197.702516 seconds (0d 0h 3m 17s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fe094098a10):  WatcherThread [stack: 0x00007fe0779fb000,0x00007fe077afb000] [id=55932]
+
+Stack: [0x00007fe0779fb000,0x00007fe077afb000],  sp=0x00007fe077af9cc0,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0xc4f83e]  PerfLongVariant::sample()+0x1e
+V  [libjvm.so+0xd96a04]  StatSamplerTask::task()+0x34
+V  [libjvm.so+0xe1addc]  PeriodicTask::real_time_tick(int)+0x5c
+V  [libjvm.so+0xbdf047]  WatcherThread::run()+0x47
+V  [libjvm.so+0xe5952e]  Thread::call_run()+0xde
+V  [libjvm.so+0xc11761]  thread_native_entry(Thread*)+0xe1
+
+
+siginfo: si_signo: 7 (SIGBUS), si_code: 2 (BUS_ADRERR), si_addr: 0x00007fe09bf7b650
+
+Register to memory mapping:
+
+RAX=0x00000000008218a0 is an unknown value
+RBX=0x00007fe09bf7b650 points into unknown readable memory: 0x00000000008218a0 | a0 18 82 00 00 00 00 00
+RCX=0x0000000000000002 is an unknown value
+RDX=0x0 is NULL
+RSP=0x00007fe077af9cc0 points into unknown readable memory: 0x00007fe077af9cf0 | f0 9c af 77 e0 7f 00 00
+RBP=0x00007fe077af9cd0 points into unknown readable memory: 0x00007fe077af9cf0 | f0 9c af 77 e0 7f 00 00
+RSI=0x0000000000000200 is an unknown value
+RDI=0x00007fe0940115b8 points into unknown readable memory: 0x0000000000000000 | 00 00 00 00 00 00 00 00
+R8 =0x0 is NULL
+R9 =0x0 is NULL
+R10=0x0 is NULL
+R11=0x0000000000000286 is an unknown value
+R12=0x00007fe094098930 points into unknown readable memory: 0x00007fe094098950 | 50 89 09 94 e0 7f 00 00
+R13=0x0000000000000001 is an unknown value
+R14=0x0000000000000002 is an unknown value
+R15=0x00007fe09d6e4480: <offset 0x0000000001306480> in /nix/store/h7q3vyh4x4hid188m94j9dy6hcaxr6vn-openjdk-headless-17.0.1+12/lib/openjdk/lib/server/libjvm.so at 0x00007fe09c3de000
+
+
+Registers:
+RAX=0x00000000008218a0, RBX=0x00007fe09bf7b650, RCX=0x0000000000000002, RDX=0x0000000000000000
+RSP=0x00007fe077af9cc0, RBP=0x00007fe077af9cd0, RSI=0x0000000000000200, RDI=0x00007fe0940115b8
+R8 =0x0000000000000000, R9 =0x0000000000000000, R10=0x0000000000000000, R11=0x0000000000000286
+R12=0x00007fe094098930, R13=0x0000000000000001, R14=0x0000000000000002, R15=0x00007fe09d6e4480
+RIP=0x00007fe09d02d83e, EFLAGS=0x0000000000010246, CSGSFS=0x002b000000000033, ERR=0x0000000000000007
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007fe077af9cc0)
+0x00007fe077af9cc0:   00007fe077af9cf0 0000000000000001
+0x00007fe077af9cd0:   00007fe077af9cf0 00007fe09d174a04
+0x00007fe077af9ce0:   0000000000000033 0000000000000033
+0x00007fe077af9cf0:   00007fe077af9d40 00007fe09d1f8ddc 
+
+Instructions: (pc=0x00007fe09d02d83e)
+0x00007fe09d02d73e:   00 48 83 c4 08 5b 41 5c 41 5d 41 5e 41 5f 5d c3
+0x00007fe09d02d74e:   66 90 31 f6 4c 89 e7 e8 26 ae 20 00 e9 7f ff ff
+0x00007fe09d02d75e:   ff 90 31 f6 4c 89 e7 e8 16 ae 20 00 e9 12 ff ff
+0x00007fe09d02d76e:   ff 90 31 f6 4c 89 e7 e8 06 ae 20 00 e9 96 fe ff
+0x00007fe09d02d77e:   ff 90 be 01 00 00 00 4c 89 e7 e8 03 06 07 00 e9
+0x00007fe09d02d78e:   63 fe ff ff 66 0f 1f 44 00 00 be 01 00 00 00 4c
+0x00007fe09d02d79e:   89 e7 e8 eb 05 07 00 e9 1c ff ff ff 66 0f 1f 44
+0x00007fe09d02d7ae:   00 00 48 8d 05 71 ab 64 00 48 8d 0d b6 20 39 00
+0x00007fe09d02d7be:   48 8d 15 c5 20 39 00 be 44 01 00 00 48 8d 3d a7
+0x00007fe09d02d7ce:   1f 39 00 48 8b 00 c6 00 58 31 c0 e8 12 30 9b ff
+0x00007fe09d02d7de:   e8 dd c6 fb ff e9 bd fe ff ff 0f 1f 84 00 00 00
+0x00007fe09d02d7ee:   00 00 be 01 00 00 00 4c 89 e7 e8 93 05 07 00 e9
+0x00007fe09d02d7fe:   53 fe ff ff 66 0f 1f 44 00 00 4c 89 e7 45 31 e4
+0x00007fe09d02d80e:   e8 3d 58 20 00 e9 bc fd ff ff 0f 1f 84 00 00 00
+0x00007fe09d02d81e:   00 00 4c 8b 47 38 4d 85 c0 74 27 55 48 89 e5 53
+0x00007fe09d02d82e:   48 83 ec 08 49 8b 00 48 8b 5f 28 4c 89 c7 ff 10
+0x00007fe09d02d83e:   48 89 03 48 8b 5d f8 c9 c3 66 0f 1f 84 00 00 00
+0x00007fe09d02d84e:   00 00 c3 90 66 66 2e 0f 1f 84 00 00 00 00 00 0f
+0x00007fe09d02d85e:   1f 00 49 89 f8 48 89 f7 48 63 f2 49 8b 40 28 48
+0x00007fe09d02d86e:   8d 15 b9 1a 3a 00 48 8b 08 31 c0 e9 c2 f7 5f ff
+0x00007fe09d02d87e:   66 90 49 89 f8 31 c0 48 89 f7 48 63 f2 49 8b 48
+0x00007fe09d02d88e:   28 48 8d 15 90 17 35 00 e9 a5 f7 5f ff 90 0f 1f
+0x00007fe09d02d89e:   40 00 55 48 8d 05 08 19 64 00 66 41 0f 6e c0 66
+0x00007fe09d02d8ae:   0f 6e c9 66 0f 62 c1 48 89 e5 41 57 49 89 d7 41
+0x00007fe09d02d8be:   56 41 55 4c 63 ee 41 54 53 48 89 fb 48 83 ec 18
+0x00007fe09d02d8ce:   48 89 07 48 8d 05 e8 f3 65 00 48 c7 47 08 00 00
+0x00007fe09d02d8de:   00 00 4e 8b 34 e8 c6 47 18 00 48 c7 47 28 00 00
+0x00007fe09d02d8ee:   00 00 66 0f d6 47 10 48 89 d7 e8 e3 fb 5f ff 4c
+0x00007fe09d02d8fe:   89 f7 48 89 45 c8 e8 d7 fb 5f ff 48 8b 55 c8 be
+0x00007fe09d02d90e:   08 00 00 00 48 8d 7c 02 02 31 d2 e8 42 10 77 ff
+0x00007fe09d02d91e:   48 89 43 08 48 89 c7 41 83 fd 18 74 65 4d 89 ec
+0x00007fe09d02d92e:   4d 69 ed 56 55 55 55 4d 89 f9 4d 89 f0 48 8d 0d 
+
+
+Stack slot to memory mapping:
+stack at sp + 0 slots: 0x00007fe077af9cf0 points into unknown readable memory: 0x00007fe077af9d40 | 40 9d af 77 e0 7f 00 00
+stack at sp + 1 slots: 0x0000000000000001 is an unknown value
+stack at sp + 2 slots: 0x00007fe077af9cf0 points into unknown readable memory: 0x00007fe077af9d40 | 40 9d af 77 e0 7f 00 00
+stack at sp + 3 slots: 0x00007fe09d174a04: <offset 0x0000000000d96a04> in /nix/store/h7q3vyh4x4hid188m94j9dy6hcaxr6vn-openjdk-headless-17.0.1+12/lib/openjdk/lib/server/libjvm.so at 0x00007fe09c3de000
+stack at sp + 4 slots: 0x0000000000000033 is an unknown value
+stack at sp + 5 slots: 0x0000000000000033 is an unknown value
+stack at sp + 6 slots: 0x00007fe077af9d40 points into unknown readable memory: 0x00007fe077af9dc0 | c0 9d af 77 e0 7f 00 00
+stack at sp + 7 slots: 0x00007fe09d1f8ddc: <offset 0x0000000000e1addc> in /nix/store/h7q3vyh4x4hid188m94j9dy6hcaxr6vn-openjdk-headless-17.0.1+12/lib/openjdk/lib/server/libjvm.so at 0x00007fe09c3de000
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007fe06014c9d0, length=28, elements={
+0x00007fe09404de70, 0x00007fe09404f280, 0x00007fe0940558a0, 0x00007fe094056c20,
+0x00007fe094058000, 0x00007fe094059500, 0x00007fe09405a950, 0x00007fe0940970f0,
+0x00007fe09409aa40, 0x00007fe094c73c50, 0x00007fe050001290, 0x00007fe094c7ec90,
+0x00007fe094c8cee0, 0x00007fe0950384a0, 0x00007fe040004a70, 0x00007fe0957d1ca0,
+0x00007fe0957d2990, 0x00007fe0957d35e0, 0x00007fe0957d42d0, 0x00007fe0957d5350,
+0x00007fe0957d67c0, 0x00007fe0957d7db0, 0x00007fe0957d9160, 0x00007fe0957da5f0,
+0x00007fe0957dba80, 0x00007fe0957deac0, 0x00007fe0957e4b00, 0x00007fe094014200
+}
+
+Java Threads: ( => current thread )
+  0x00007fe09404de70 JavaThread "Reference Handler" daemon [_thread_blocked, id=55923, stack(0x00007fe0981fd000,0x00007fe0982fe000)]
+  0x00007fe09404f280 JavaThread "Finalizer" daemon [_thread_blocked, id=55924, stack(0x00007fe0980fc000,0x00007fe0981fd000)]
+  0x00007fe0940558a0 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=55925, stack(0x00007fe08c13d000,0x00007fe08c23e000)]
+  0x00007fe094056c20 JavaThread "Service Thread" daemon [_thread_blocked, id=55926, stack(0x00007fe08c03c000,0x00007fe08c13d000)]
+  0x00007fe094058000 JavaThread "Monitor Deflation Thread" daemon [_thread_blocked, id=55927, stack(0x00007fe077eff000,0x00007fe078000000)]
+  0x00007fe094059500 JavaThread "C1 CompilerThread0" daemon [_thread_in_vm, id=55928, stack(0x00007fe077dfe000,0x00007fe077eff000)]
+  0x00007fe09405a950 JavaThread "Sweeper thread" daemon [_thread_blocked, id=55929, stack(0x00007fe077cfd000,0x00007fe077dfe000)]
+  0x00007fe0940970f0 JavaThread "Notification Thread" daemon [_thread_blocked, id=55931, stack(0x00007fe077afb000,0x00007fe077bfc000)]
+  0x00007fe09409aa40 JavaThread "Common-Cleaner" daemon [_thread_blocked, id=55933, stack(0x00007fe0778f8000,0x00007fe0779f9000)]
+  0x00007fe094c73c50 JavaThread "Catalina-utility-1" [_thread_blocked, id=56014, stack(0x00007fe0766ff000,0x00007fe076800000)]
+  0x00007fe050001290 JavaThread "Catalina-utility-2" [_thread_blocked, id=56015, stack(0x00007fe0765fe000,0x00007fe0766ff000)]
+  0x00007fe094c7ec90 JavaThread "container-0" [_thread_blocked, id=56016

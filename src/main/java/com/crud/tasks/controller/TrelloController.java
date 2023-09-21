@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("v1/trello") // http://localhost:8080/v1/trello/boards
+@RequestMapping("v1/trello") 
 @RequiredArgsConstructor
 @CrossOrigin("*")
 public class TrelloController {
