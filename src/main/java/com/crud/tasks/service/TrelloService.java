@@ -17,21 +17,20 @@ import static java.util.Optional.ofNullable;
 @RequiredArgsConstructor
 public class TrelloService {
 
-    //Temat nie będzie się zmieniał zatem stała
+
     private final static String SUBJECT = "Tasks: New Trello card";
-    //email będzie zawarty w klasie AdminConfig
+
     private final AdminConfig adminConfig;
     private final TrelloClient trelloClient;
     private final SimpleEmailService emailService;
 
-    //Opakowanie metody getTrelloBoards()
+
     public List<TrelloBoardDto> fetchTrelloBoards() {
         return trelloClient.getTrelloBoards();
     }
-    //Opakowanie metody createNewCard()
+
     public CreatedTrelloCardDto createTrelloCard(final TrelloCardDto trelloCardDto) {
         CreatedTrelloCardDto newCard = trelloClient.createNewCard(trelloCardDto);
-
         ofNullable(newCard).ifPresent(card -> emailService.send(
                 new Mail(
                         adminConfig.getAdminMail(),
@@ -39,8 +38,6 @@ public class TrelloService {
                         "New card: " + trelloCardDto.getName() + " has been created on your Trello account",
                         null
                 )));
-
         return newCard;
     }
-    //Zamienić wstrzykiwaną klasę TrelloClient na TrelloService w Controllerze
 }
