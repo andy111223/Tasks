@@ -59,12 +59,7 @@ class TrelloControllerTest {
                 //Board fields
                 .andExpect(MockMvcResultMatchers.jsonPath("$",Matchers.hasSize(1)))
                 .andExpect(MockMvcResultMatchers.jsonPath("$[0].id",Matchers.is("1")))
-                .andExpect(MockMvcResultMatchers.jsonPath("$[0].name",Matchers.is("Test Task")));
-        //Act & Assert
-        mockMvc
-                .perform(MockMvcRequestBuilders
-                        .get("/v1/trello/boards")
-                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(MockMvcResultMatchers.jsonPath("$[0].name",Matchers.is("Test Task")))
                 //List fields
                 .andExpect(MockMvcResultMatchers.jsonPath("$[0].lists",Matchers.hasSize(1)))
                 .andExpect(MockMvcResultMatchers.jsonPath("$[0].lists[0].id",Matchers.is("1")))
