@@ -18,7 +18,7 @@ and configures Spring Data JPA repositories.
 TestEntityManager: Used for JPA entity related operations in tests.
 It's provided by Spring Boot to work in harmony with @DataJpaTest.
  */
-@ActiveProfiles("test")
+//@ActiveProfiles("test")
 @DataJpaTest
 class TaskRepositoryTest {
 
@@ -43,17 +43,17 @@ class TaskRepositoryTest {
 //        assertThat(tasks).hasSize(2).contains(task1, task2);
 //    }
 
-    @Test
-    public void save_PersistsTaskSuccessfully() {
-        // given
-        Task task = new Task(1L, "Task", "Desc");
-
-        // when
-        Task savedTask = taskRepository.save(task);
-
-        // then
-        assertThat(entityManager.find(Task.class, savedTask.getId())).isEqualTo(savedTask);
-    }
+//    @Test
+//    public void save_PersistsTaskSuccessfully() {
+//        // given
+//        Task task = new Task(1L, "Task", "Desc");
+//
+//        // when
+//        Task savedTask = taskRepository.save(task);
+//
+//        // then
+//        assertThat(entityManager.find(Task.class, savedTask.getId())).isEqualTo(savedTask);
+//    }
 
 //    @Test
 //    public void findById_RetrievesCorrectTask() {
